@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/animate.min.css">
+        <link rel="stylesheet" href="/css/bulma.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    </head>
+    <style>
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: #99E57D;
+        }
+        .profile-image img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .profile-image {
+            margin-bottom: 20px;
+            animation-duration: 1s;
+            animation-delay: 100ms;
+        }
+        .info-columns {
+            position: relative;
+            z-index: 10;
+            flex-wrap: wrap;
+        }
+        .info-columns .title {
+            animation-duration: 1s;
+            animation-delay: 200ms;
+            opacity: 0;
+        }
+        .info-columns .subtitle {
+            animation-duration: 1s;
+            animation-delay: 500ms;
+            opacity: 0;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        .kari-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;;
+            z-index: 0;
+        }
+        .social-buttons a {
+            margin-right: 20px;
+            color: rgb(75, 73, 73);
+            animation-duration: 0.5s;
+            animation-delay: 100ms;
+            position: relative;
+            transform: scale(0);
+        }
+        @media only screen and (max-width: 600px) {
+            .hero-body {
+                align-items: flex-start !important;
+                margin-top: 200px;
+            }
+            .info-columns .column{
+                text-align: center;
+            }
+            .social-buttons {
+                justify-content: center;
+            }
+        }
+    </style>
+    <body>
+        <section class="hero is-fullheight">
+            <div class="hero-body">
+                <div class="container">
+                    <div class="columns info-columns is-mobile">
+                        <div class="column is-full">
+                            <figure class="profile-image animated fadeIn">
+                                <img src="/img/kari.jpg" alt="Kari Mruz">
+                            </figure>
+                            <div class="animated title is-5">Kari Mruz</div>
+                            <div class="animated subtitle is-5">Director of Special Projects at CIC</div>
+                        </div>
+                        <div class="column is-full">
+                            <div class="buttons social-buttons">
+                                <a class="animated" href="https://www.linkedin.com/in/kmruz/">
+                                    <span class="icon">
+                                        <i class="fa fa-linkedin"></i>
+                                    </span>
+                                </a>   
+                                <a class="animated" href="https://www.instagram.com/karimruz">
+                                    <span class="icon">
+                                        <i class="fa fa-instagram"></i>
+                                    </span>
+                                </a>
+                                <a class="animated email-me" href="https://www.linkedin.com/in/kmruz/">
+                                    <span class="icon">
+                                        <i class="fa fa-envelope"></i>
+                                    </span>
+                                </a>   
+                            </div>                                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <canvas class="kari-canvas"></canvas>
+        <script src="/js/anime.min.js"></script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>
